@@ -5,7 +5,7 @@ from . import views
 urlpatterns = [
     #Ingresar al login
     path('', views.login_pagina, name= 'login_pagina'),
-
+        
     path('tareas/', views.inicio, name='inicio'),
 
     path('crear/', views.crear_tarea, name='crear_tarea'),
@@ -15,4 +15,5 @@ urlpatterns = [
 
     #API LOGIN
     path('api/login/', views.LoginAPIView.as_view(), name='login_api'),
+    path('api/tareas/', views.TareasAPIView.as_view(), name='api_tareas'),
 ]
